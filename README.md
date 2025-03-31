@@ -31,7 +31,7 @@ Ce projet est un exercice visant à imiter un backoffice basique affichant une l
 
 1. Cloner le projet :
    ```bash
-   git clone https://github.com/votre-repo/backoffice-produit.git
+   git clone https://github.com/OswaldPro/Exercise-JS-JSON-BackOffice.git
    ```
 2. Ouvrir le fichier `index.html` dans un navigateur.
 
