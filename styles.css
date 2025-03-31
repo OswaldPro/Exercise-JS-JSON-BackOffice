@@ -1,0 +1,313 @@
+html {
+  scroll-behavior: smooth;
+  font-family: sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f8f8f8;
+  display: flex;
+}
+
+main {
+  position: relative;
+  z-index: 5;
+  left: 250px;
+}
+
+a {
+  text-decoration: none;
+  color: #f8f8f8;
+}
+
+ul {
+  list-style: none;
+}
+
+h1 {
+  text-transform: uppercase;
+  padding: 1rem;
+}
+
+.side-bar {
+ background-color: #323232;
+ position: fixed;
+ z-index: 10;
+ display: flex;
+ flex-direction: column;
+ justify-content: flex-start;
+ gap: 5rem;
+ width: 250px;
+ height: 100%;
+}
+
+.nav-bar li {
+  font-weight: 700;
+  margin: 2rem 1rem;
+}
+
+.compta-link::before {
+  content :url(/imagesProduits/icons/file-text.png);
+  padding-right: 1rem;
+}
+
+.prod-link::before {
+  content :url(/imagesProduits/icons/shopping-bag.png);
+  padding-right: 1rem;
+}
+
+.four-link::before {
+  content :url(/imagesProduits/icons/truck.png);
+  padding-right: 1rem;
+}
+
+.comm-link::before {
+  content :url(/imagesProduits/icons/archive.png);
+  padding-right: 1rem;
+}
+
+.param-link::before {
+  content :url(/imagesProduits/icons/settings.png);
+  padding-right: 1rem;
+}
+
+.title {
+  width: calc(100vw - 250px);
+  height: 70px;
+  color: #f8f8f8;
+  background-color:#F0515A;
+
+}
+
+#products {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-add {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 150px;
+  width: 90%
+}
+
+#searchBar {
+  width: 40%;
+  height: 3rem;
+}
+
+table {
+  width: 90%;
+  border-collapse: collapse;
+}
+
+thead {
+  color: #f8f8f8;
+  background-color: #323232;
+  height: 3rem;
+  border: 1px #323232 solid;
+  text-align: left;
+}
+
+tbody {
+  background-color: #f8f8f8;
+}
+
+.productList tr {
+  height: 3rem;
+  border : none;
+  border-top: #f8f8f8 8px solid;
+  border-right:#fff solid 1px;
+}
+
+.details-btn {
+  width: 32px;
+  height: 32px;
+  background: url(/imagesProduits/icons/eye.png) no-repeat center;
+  background-size: contain;
+  border: 0;
+  cursor: pointer;
+}
+
+.modifier-btn {
+  width: 32px;
+  height: 32px;
+  background: url(/imagesProduits/icons/edit.png) no-repeat center;
+  background-size: contain;
+  border: 0;
+  cursor: pointer;
+}
+
+
+.delet-btn {
+  width: 32px;
+  height: 32px;
+  background: url(/imagesProduits/icons/trash.png) no-repeat center;
+  background-size: contain;
+  border: 0;
+  cursor: pointer;
+}
+
+.restore-btn {
+  color: #323232;
+  width: 3rem;
+  background-color: #f8f8f8;
+  border: 0;
+}
+
+.modal {
+  display: block;
+  width: 50%;
+  position: fixed;
+  z-index: 1000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  background-color: #f8f8f869;
+  backdrop-filter: blur(10px);
+}
+
+.modal-btns {
+  margin-top: 10px;
+  text-align: end;
+}
+
+.modal-btns button {
+  color: #f8f8f8;
+  font-size: 1.5rem;
+  background-color: #F0515A;
+  padding: 1rem;
+  margin-left: 3rem;
+  border: 0;
+  cursor: pointer;
+}
+.modal-btns button:hover {
+  background-color: #323232;
+}
+
+input:read-only {
+  background-color: #bebebe;
+  color: #505050;
+  cursor: not-allowed;
+  margin-left: 1rem;
+  border-radius: 5px;
+  border: #fff;
+  height: 2rem;
+}
+
+input {
+  margin: 1rem;
+  padding-left: 5px;
+  border-radius: 5px;
+  border: #00000068 1px solid;
+  height: 2rem;
+}
+
+input:active {
+  border: #F0515A 1px solid;
+}
+
+.detail-modal {
+  display: block;
+  width: 50%;
+  position: fixed;
+  z-index: 1000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  box-shadow: 0px 5px 10px #00000033;
+  color: #f8f8f8;
+  background-color: #323232;
+  backdrop-filter: blur(10px);
+}
+
+#addProduct {
+  width: 12%;
+  aspect-ratio: 5/2;
+  background-color: #F0515A;
+  border-radius: 0;
+  border: 0;
+  color: #f8f8f8;
+  font-size: 1.5rem;
+}
+
+#addProduct:hover {
+  background-color: #323232;
+  cursor: pointer;
+}
+
+.add-modal {
+  display: block;
+  width: 50%;
+  aspect-ratio: 2/1;
+  position: fixed;
+  z-index: 1000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  box-shadow: 0px 5px 10px #00000033;
+  color: #f8f8f8;
+  background-color: #323232ad;
+  backdrop-filter: blur(10px);
+}
+
+.trash-modal {
+  display: block;
+  width: 50%;
+  position: fixed;
+  z-index: 1000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  box-shadow: 0px 5px 10px #00000033;
+  color:#323232;
+  background-color: #bfbfbf;
+  backdrop-filter: blur(10px);
+}
+
+#trashBtn {
+  width: 12%;
+  aspect-ratio: 5/2;
+  background-color: #F0515A;
+  border-radius: 0;
+  border: 0;
+  color: #f8f8f8;
+  font-size: 1.5rem;
+}
+
+#trashBtn:hover {
+  background-color: #323232;
+  cursor: pointer;
+}
+
+.trash-count {
+  display: inline-block;
+  padding: 0.5rem;
+  width: 2rem;
+  aspect-ratio: 1/1;
+  color: #F0515A;
+  background-color: #f8f8f8;
+
+}
+
+.dnone {
+  display: none;
+}
+
+.blur {
+  filter: blur(5px);
+}
